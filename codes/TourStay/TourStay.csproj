@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DEE2872-7042-4603-B62D-171BABF2D319}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TourStay</RootNamespace>
+    <AssemblyName>TourStay</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomResources\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomResources\RoundImg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBUtilities\ConnectionDB.cs" />
+    <Compile Include="LogoutSystem\LogoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogoutSystem\LogoutForm.Designer.cs">
+      <DependentUpon>LogoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationSystem\InfoInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificationSystem\InfoInterface.Designer.cs">
+      <DependentUpon>InfoInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationSystem\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationSystem\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScreens\HotelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreens\HotelForm.Designer.cs">
+      <DependentUpon>HotelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScreens\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreens\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScreens\SplashScreens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreens\SplashScreens.Designer.cs">
+      <DependentUpon>SplashScreens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScreens\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreens\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentOne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentOne.Designer.cs">
+      <DependentUpon>HotelComponentOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentsThree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentsThree.Designer.cs">
+      <DependentUpon>HotelComponentsThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentsTwo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelComponentsTwo.Designer.cs">
+      <DependentUpon>HotelComponentsTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\HotelFormUC\HotelInfoUC.Designer.cs">
+      <DependentUpon>HotelInfoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\NotificataionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\NotificataionUC.Designer.cs">
+      <DependentUpon>NotificataionUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\ProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\ProfileUC.Designer.cs">
+      <DependentUpon>ProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelMenus\UpdateUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HotelMenus\UpdateUC.Designer.cs">
+      <DependentUpon>UpdateUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC\HotelLoginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUC\HotelLoginUC.Designer.cs">
+      <DependentUpon>HotelLoginUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC\LoginOptionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUC\LoginOptionUC.Designer.cs">
+      <DependentUpon>LoginOptionUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC\SplashUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUC\SplashUC.Designer.cs">
+      <DependentUpon>SplashUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC\UserLoginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUC\UserLoginUC.Designer.cs">
+      <DependentUpon>UserLoginUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC\UserSignupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginUC\UserSignupPage.Designer.cs">
+      <DependentUpon>UserSignupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationSystem\OptionsForHotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificationSystem\OptionsForHotel.Designer.cs">
+      <DependentUpon>OptionsForHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationSystem\ShowBookingRequestInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificationSystem\ShowBookingRequestInfo.Designer.cs">
+      <DependentUpon>ShowBookingRequestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationSystem\UserNoticationShowPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificationSystem\UserNoticationShowPanel.Designer.cs">
+      <DependentUpon>UserNoticationShowPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMenus\BookingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMenus\BookingUC.Designer.cs">
+      <DependentUpon>BookingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenus\Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMenus\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenus\NotificationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMenus\NotificationUC.Designer.cs">
+      <DependentUpon>NotificationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenus\ProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMenus\ProfileUC.Designer.cs">
+      <DependentUpon>ProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenus\UserProfileUpdateForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMenus\UserProfileUpdateForm.Designer.cs">
+      <DependentUpon>UserProfileUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilittyUC\BookingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UtilittyUC\BookingUC.Designer.cs">
+      <DependentUpon>BookingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilittyUC\NotificationBarUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UtilittyUC\NotificationBarUC.Designer.cs">
+      <DependentUpon>NotificationBarUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClass\AddFormDataToHotelDB.cs" />
+    <Compile Include="UtilityClass\ColorHandler.cs" />
+    <Compile Include="UtilityClass\FormAndUCLoader.cs" />
+    <Compile Include="UtilityClass\GetHotelDetails.cs" />
+    <Compile Include="UtilityClass\GetHotelDetailsForUser.cs" />
+    <Compile Include="UtilityClass\GetProfilePic.cs" />
+    <Compile Include="UtilityClass\HotelComponentHolder.cs" />
+    <Compile Include="UtilityClass\HotelFormDataHolder.cs" />
+    <Compile Include="UtilityClass\HotelFormDetailsHolderKeys.cs" />
+    <Compile Include="UtilityClass\HotelInfoHolder.cs" />
+    <Compile Include="UtilityClass\HotelInfoHolderForCard.cs" />
+    <Compile Include="UtilityClass\HotelInfoUpdater.cs" />
+    <Compile Include="UtilityClass\NotificationHandler.cs" />
+    <Compile Include="UtilityClass\NotificationHolder.cs" />
+    <Compile Include="UtilityClass\TempSpotCard.cs" />
+    <Compile Include="UtilityClass\UserBookingHandler.cs" />
+    <Compile Include="UtilityClass\UserInfoUpdater.cs" />
+    <Compile Include="UtilityClass\UserLoginInfoHolder.cs" />
+    <EmbeddedResource Include="LogoutSystem\LogoutForm.resx">
+      <DependentUpon>LogoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationSystem\InfoInterface.resx">
+      <DependentUpon>InfoInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationSystem\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScreens\HotelForm.resx">
+      <DependentUpon>HotelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScreens\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScreens\SplashScreens.resx">
+      <DependentUpon>SplashScreens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScreens\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\HotelFormUC\HotelComponentOne.resx">
+      <DependentUpon>HotelComponentOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\HotelFormUC\HotelComponentsThree.resx">
+      <DependentUpon>HotelComponentsThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\HotelFormUC\HotelComponentsTwo.resx">
+      <DependentUpon>HotelComponentsTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\HotelFormUC\HotelInfoUC.resx">
+      <DependentUpon>HotelInfoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\NotificataionUC.resx">
+      <DependentUpon>NotificataionUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\ProfileUC.resx">
+      <DependentUpon>ProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMenus\UpdateUC.resx">
+      <DependentUpon>UpdateUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUC\HotelLoginUC.resx">
+      <DependentUpon>HotelLoginUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUC\LoginOptionUC.resx">
+      <DependentUpon>LoginOptionUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUC\SplashUC.resx">
+      <DependentUpon>SplashUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUC\UserLoginUC.resx">
+      <DependentUpon>UserLoginUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUC\UserSignupPage.resx">
+      <DependentUpon>UserSignupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationSystem\OptionsForHotel.resx">
+      <DependentUpon>OptionsForHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationSystem\ShowBookingRequestInfo.resx">
+      <DependentUpon>ShowBookingRequestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationSystem\UserNoticationShowPanel.resx">
+      <DependentUpon>UserNoticationShowPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserMenus\BookingUC.resx">
+      <DependentUpon>BookingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenus\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenus\NotificationUC.resx">
+      <DependentUpon>NotificationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenus\ProfileUC.resx">
+      <DependentUpon>ProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenus\UserProfileUpdateForm.resx">
+      <DependentUpon>UserProfileUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilittyUC\NotificationBarUC.resx">
+      <DependentUpon>NotificationBarUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
